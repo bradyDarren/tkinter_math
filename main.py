@@ -3,13 +3,28 @@ import math
 
 BLACK = '#000000'
 a = 1
+FONT_NAME = "Courier"
+types = {'*':"MULTIPLICATION",
+         "+":"ADDITION", 
+         "-":"SUBTRACTION",
+         "/":"DIVISION"}
 
-# creation of the window.
+
+# ---------------------------- UI SETUP ------------------------------- #
 window = Tk() 
 window.title("Math Challenge")
 window.config(padx=50, pady= 50, bg=BLACK, height= 500, width=500)
 
-correct = Label(text=f"Correct: {a} | Missed {a}")
-correct.grid(column=0, row=0)
+correct = Label(text=f"Correct: {a} | Missed {a}", font=(FONT_NAME, 45, "bold"))
+correct.grid(column=2, row=0)
+
+num_1 = Label(text=f"{a}", bg=BLACK, font=(FONT_NAME, 45, "bold"))
+num_1.grid(column=2, row=2, pady=(10,0))
+
+num_2 = Label(text=f"{a}", bg=BLACK, font=(FONT_NAME, 45, "bold"))
+num_2.grid(column=2, row=3, pady=(0,0))
+
+line = Label(text = "--------", bg=BLACK, font=(FONT_NAME, 45, "bold"))
+line.grid(column=2, row=4, pady=(0,0))
 
 window.mainloop()
