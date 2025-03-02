@@ -32,6 +32,4 @@ line.grid(column=2, row=4, pady=(0,0))
 
 # answer = Entry
 
-
-
 window.mainloop()
